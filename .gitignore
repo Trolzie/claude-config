@@ -6,6 +6,7 @@ logs/
 data/
 statsig/
 shell-snapshots/
+todos/
 
 # Project caches (large temporary files)
 projects/

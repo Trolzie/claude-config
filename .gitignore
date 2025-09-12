@@ -1,0 +1,19 @@
+# Sensitive files
+.env
+
+# Logs and temporary data
+logs/
+data/
+statsig/
+shell-snapshots/
+
+# Project caches (large temporary files)
+projects/
+
+# macOS system files
+.DS_Store
+*.DS_Store
+
+# Other temporary files
+*.tmp
+*.log

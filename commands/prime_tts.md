@@ -5,19 +5,16 @@ description: Load context for a new agent session by analyzing codebase structur
 
 # Prime
 
-This command loads essential context for a new agent session by examining the codebase structure and reading the project README.
+Load essential context for a new agent session.
 
-## Instructions
-- Run `git ls-files` to understand the codebase structure and file organization
-- Read the README.md to understand the project purpose, setup instructions, and key information
-- Provide a concise overview of the project based on the gathered context
+## Steps
 
-## Context
-- Codebase structure git accessible: !`git ls-files`
-- Codebase structure all: !`eza . --tree`
-- Project README: @README.md
-- Documentation: 
-  - @ai_docs/cc_hooks_docs.md
-  - @ai_docs/uv-single-file-scripts.md
+1. **Structure** — Run `git ls-files` (or `ls -R` if not a git repo) to understand the codebase
+2. **README** — Read `README.md` (or `readme.md`) if it exists
+3. **Project instructions** — Read `CLAUDE.md` if it exists
+4. **Documentation** — Check for and read any docs that exist:
+   - `ai_docs/` directory — read all `.md` files if the directory exists
+   - `docs/` directory — read top-level `.md` files (not subdirectories) if it exists
+5. **Report** — Provide a concise summary of the project
 
-When you finish run the tts summary agent, and let the user know you're ready to build.
+When you finish, run the TTS summary agent and let the user know you're ready to build.

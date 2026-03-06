@@ -5,18 +5,19 @@ description: Load context for a new agent session by analyzing codebase structur
 
 # Prime
 
-Run the commands under the `Execute` section to gather information about the project, and then review the files listed under `Read` to understand the project's purpose and functionality then `Report` your findings.
+Load essential context for a new agent session.
 
-## Execute
-- `git ls-files`
+## Steps
 
-## Read
-- README.md
-- ai_docs/cc_hooks_docs.md
-- ai_docs/uv-single-file-scripts.md
-- ai_docs/anthropic_custom_slash_commands.md
-- ai_docs/anthropic_docs_subagents.md
-
-## Report
-
-- Provide a summary of your understanding of the project
+1. **Structure** — Run `git ls-files` (or `ls -R` if not a git repo) to understand the codebase
+2. **README** — Read `README.md` (or `readme.md`) if it exists
+3. **Project instructions** — Read `CLAUDE.md` if it exists (note: also auto-loaded, but reading it explicitly helps you reference specific sections in your report)
+4. **Documentation** — Check for and read any docs that exist:
+   - `ai_docs/` directory — read all `.md` files if the directory exists
+   - `docs/` directory — read top-level `.md` files (not subdirectories) if it exists
+5. **Report** — Provide a concise summary:
+   - What the project does
+   - Tech stack and key dependencies
+   - Project structure highlights
+   - Key patterns or conventions from CLAUDE.md (if present)
+   - Notable documentation found
